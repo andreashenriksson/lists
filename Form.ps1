@@ -91,7 +91,9 @@ function countInput{
     $cop = $cop.split(" ");
     $count = 0
     foreach($obj in $cop){
-        $count = $count + 1
+	if($obj.Length -gt 0){
+            $count = $count + 1
+	}
     }
 
     $outBox.Text = $count
